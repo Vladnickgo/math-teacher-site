@@ -95,6 +95,14 @@ body {
     text-align: center;
 }
 
+.photo-placeholder img {
+    width: 98%;
+    height: 98%;
+    object-fit: cover;  /* ГЛАВНОЕ: фото заполнит блок без искажений */
+    object-position: center; /* Центрирует изображение внутри */
+    border-radius: 20px;
+}
+
 .teacher-info {
     color: white;
     max-width: 500px;
@@ -948,4 +956,23 @@ footer {
 
 .nav-btn.prev:hover {
     transform: translateX(-5px);
+}
+.example-box {
+    background: #f0f4ff;
+    padding: 25px;                    /* збільшено з 20px */
+    border-radius: 10px;
+    margin-top: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.3em;                 /* збільшений шрифт */
+    line-height: 1.8;                 /* більший міжрядковий інтервал */
+}
+
+.example-box strong {
+    font-size: 1.1em;                 /* ще трохи більше для заголовка */
+    color: #667eea;
+}
+.example-box .big-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #061c81;
 }
