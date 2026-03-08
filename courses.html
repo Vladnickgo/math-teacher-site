@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курси | Викладач математики</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="main-menu">
+        <div class="logo">🧮 Математика</div>
+        <ul class="menu-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про мене</a></li>
+            <li><a href="courses.html" class="active">Курси</a></li>
+            <li><a href="materials.html">Матеріали</a></li>
+            <li><a href="schedule.html">Розклад</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- ЗАГОЛОВОК СТОРІНКИ -->
+    <section class="page-header">
+        <h1>📚 Мої курси</h1>
+        <p>Навчальні дисципліни для різних класів та рівнів підготовки</p>
+    </section>
+
+    <!-- СПИСОК КУРСІВ -->
+    <section class="courses-section">
+        <div class="courses-container">
+            
+            <!-- Курс 1 -->
+            <article class="course-card">
+                <div class="course-header grade-5">
+                    <span class="course-grade">5 клас</span>
+                    <h2>Математика</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Базовий курс математики для 5 класу за програмою Мерзляка. 
+                        Натуральні числа, дроби, геометричні фігури.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Натуральні числа та дії з ними</li>
+                            <li>Округлення чисел</li>
+                            <li>Десяткові дроби</li>
+                            <li>Відсотки та пропорції</li>
+                            <li>Геометричні фігури на площині</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 174 години</span>
+                        <a href="classes/5-class/index.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Курс 2 -->
+            <article class="course-card">
+                <div class="course-header grade-6">
+                    <span class="course-grade">6 клас</span>
+                    <h2>Математика</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Продовження вивчення математики. Раціональні числа, 
+                        пропорції, початкові відомості з алгебри та геометрії.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Ділення та дільники</li>
+                            <li>Звичайні дроби</li>
+                            <li>Раціональні числа</li>
+                            <li>Пропорції та відсотки</li>
+                            <li>Перетворення виразів</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 35 годин</span>
+                        <a href="classes/5-class/index.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Курс 3 -->
+            <article class="course-card">
+                <div class="course-header grade-7">
+                    <span class="course-grade">7 клас</span>
+                    <h2>Алгебра</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Початковий курс алгебри. Лінійні рівняння, функції, 
+                        системи рівнянь, степені з натуральним показником.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Лінійні рівняння</li>
+                            <li>Функції та їх графіки</li>
+                            <li>Степінь з натуральним показником</li>
+                            <li>Многочлени</li>
+                            <li>Формули скороченого множення</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 35 годин</span>
+                        <a href="materials.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Курс 4 -->
+            <article class="course-card">
+                <div class="course-header grade-7-geo">
+                    <span class="course-grade">7 клас</span>
+                    <h2>Геометрія</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Початковий курс геометрії. Тригонометричні фігури, 
+                        паралельні прямі, суми кутів многокутників.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Основні геометричні поняття</li>
+                            <li>Взаємне розташування прямих</li>
+                            <li>Трикутники та їх ознаки рівності</li>
+                            <li>Паралельні прямі</li>
+                            <li>Суми кутів многокутників</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 35 годин</span>
+                        <a href="materials.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Курс 5 -->
+            <article class="course-card">
+                <div class="course-header grade-8">
+                    <span class="course-grade">8 клас</span>
+                    <h2>Алгебра</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Поглиблене вивчення алгебри. Квадратні рівняння, 
+                        квадратичні функції, нерівності.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Раціональні вирази</li>
+                            <li>Квадратні корені</li>
+                            <li>Квадратні рівняння</li>
+                            <li>Квадратична функція</li>
+                            <li>Нерівності</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 35 годин</span>
+                        <a href="materials.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Курс 6 -->
+            <article class="course-card">
+                <div class="course-header grade-9">
+                    <span class="course-grade">9 клас</span>
+                    <h2>Алгебра (підготовка до ДПА)</h2>
+                </div>
+                <div class="course-body">
+                    <p class="course-desc">
+                        Інтенсивна підготовка до державної підсумкової атестації. 
+                        Повторення та систематизація знань.
+                    </p>
+                    <div class="course-topics">
+                        <h4>📋 Основні теми:</h4>
+                        <ul>
+                            <li>Числові функції</li>
+                            <li>Числові послідовності</li>
+                            <li>Елементи комбінаторики</li>
+                            <li>Повторення курсу 5-8 класів</li>
+                            <li>Розв'язування типових задач ДПА</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-duration">🕐 40 годин</span>
+                        <a href="materials.html" class="course-btn">Матеріали курсу</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ДОДАТКОВА ІНФОРМАЦІЯ -->
+    <section class="courses-info">
+        <div class="info-container">
+            <h3>📌 Важлива інформація</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-icon">📖</span>
+                    <h4>Підручники</h4>
+                    <p>Використовуються підручники Мерзляка А.Г., Нелін Є.П. та інших авторів</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📝</span>
+                    <h4>Контрольні роботи</h4>
+                    <p>Проводяться 4 рази на семестр згідно з календарним плануванням</p>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">💻</span>
+                    <h4>Онлайн-підтримка</h4>
+                    <p>Доступ до матеріалів 24/7 через сайт та месенджери</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Викладач математики</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-list').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

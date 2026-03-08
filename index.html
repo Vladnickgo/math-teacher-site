@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт викладача математики</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- ГОЛОВНЕ МЕНЮ -->
@@ -21,25 +21,66 @@
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <header>
-        <h1>👨‍🏫 Сайт викладача математичних дисциплін</h1>
-        <p>Навчання з любов'ю до цифр</p>
-    </header>
-    
-    <main>
-        <div class="construction">
-            <h2>🚧 Сайт у розробці</h2>
-            <p>Тут скоро з'явиться повноцінний сайт з:</p>
-            <ul>
-                <li>📚 Навчальними матеріалами</li>
-                <li>📅 Розкладом занять</li>
-                <li>📝 Контрольними роботами</li>
-                <li>📊 Онлайн-калькуляторами</li>
-            </ul>
-            <p class="contact">З питань звертайтесь: teacher@math.edu</p>
+    <!-- ПРОФІЛЬ ВИКЛАДАЧА -->
+    <section class="teacher-profile">
+        <div class="profile-container">
+            <div class="photo-placeholder">
+                <span>📷 Ваше фото</span>
+            </div>
+            <div class="teacher-info">
+                <h1>Голубков Володимир Миколайович</h1>
+                <p class="position">Викладач математичних дисциплін</p>
+                <div class="quote">
+                    <blockquote>
+                        "Через рівняння, теореми я всякі вирішував проблеми."
+                    </blockquote>
+                    <cite>— Джеффі Чосер</cite>
+                </div>
+            </div>
         </div>
-    </main>
-    
+    </section>
+
+    <!-- ПУБЛІКАЦІЇ -->
+    <section class="publications">
+        <h2>📚 Нові публікації</h2>
+        <div class="pub-grid">
+            <article class="pub-card">
+                <div class="pub-icon">📐</div>
+                <h3>Округлення чисел</h3>
+                <p class="pub-meta">5 клас • Мерзляк А.Г.</p>
+                <p class="pub-desc">Правила округлення натуральних чисел і десяткових дробів. Практичні завдання та приклади.</p>
+                <a href="#" class="pub-btn">Читати матеріал</a>
+            </article>
+
+            <article class="pub-card">
+                <div class="pub-icon">➕</div>
+                <h3>Додавання та віднімання десяткових дробів</h3>
+                <p class="pub-meta">5 клас • Мерзляк А.Г.</p>
+                <p class="pub-desc">Алгоритм додавання і віднімання десяткових дробів. Розв'язування задач та вправи.</p>
+                <a href="#" class="pub-btn">Читати матеріал</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- ШВИДКІ ПОСИЛАННЯ -->
+    <section class="quick-links">
+        <h2>🎯 Швидкий доступ</h2>
+        <div class="links-grid">
+            <a href="materials.html" class="quick-card">
+                <span class="quick-icon">📖</span>
+                <span>Методичні матеріали</span>
+            </a>
+            <a href="schedule.html" class="quick-card">
+                <span class="quick-icon">📅</span>
+                <span>Розклад занять</span>
+            </a>
+            <a href="contacts.html" class="quick-card">
+                <span class="quick-icon">✉️</span>
+                <span>Зв'язатися</span>
+            </a>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2026 Викладач математики</p>
     </footer>

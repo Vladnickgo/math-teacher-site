@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матеріали | Викладач математики</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="main-menu">
+        <div class="logo">🧮 Математика</div>
+        <ul class="menu-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про мене</a></li>
+            <li><a href="courses.html">Курси</a></li>
+            <li><a href="materials.html" class="active">Матеріали</a></li>
+            <li><a href="schedule.html">Розклад</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <section class="page-content">
+        <div class="container">
+            <h1>📖 Навчальні матеріали</h1>
+            <div class="placeholder-content">
+                <p>Тут будуть лекції, практичні завдання, тести та додаткові матеріали.</p>
+                <div class="coming-soon">🚧 Сторінка в розробці</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Викладач математики</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-list').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

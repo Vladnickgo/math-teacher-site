@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Десяткові дроби | 5 клас</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="main-menu">
+        <div class="logo">🧮 5 клас</div>
+        <ul class="menu-list">
+            <li><a href="../../index.html">🏠 На головну</a></li>
+            <li><a href="index.html">📐 Математика 5</a></li>
+            <li><a href="../index.html">Всі класи</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="../../index.html">Головна</a> / 
+        <a href="../index.html">Класи</a> / 
+        <a href="index.html">5 клас</a> / 
+        <span>Десяткові дроби</span>
+    </div>
+
+    <section class="lesson-header">
+        <div class="lesson-badge">Тема 5</div>
+        <h1>➕➖ Додавання та віднімання десяткових дробів</h1>
+        <p class="lesson-subtitle">Підручник: Мерзляк А.Г., § 31-33, стор. 205-220</p>
+    </section>
+
+    <section class="lesson-content">
+        <div class="content-wrapper">
+            
+            <article class="theory-block">
+                <h2>📚 Теорія</h2>
+                
+                <div class="theory-card">
+                    <h3>Правило додавання</h3>
+                    <p>Щоб додати десяткові дроби:</p>
+                    <ol class="rules-list">
+                        <li>Зрівняти кількість цифр після коми (дописати нулі)</li>
+                        <li>Записати дроби одне під одним кома під комою</li>
+                        <li>Виконати додавання як звичайні числа</li>
+                        <li>Поставити кому в відповіді під комами</li>
+                    </ol>
+                    
+                    <div class="example-box math">
+                        <pre>
+  3,250
++ 1,700
+-------
+  4,950
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Правило віднімання</h3>
+                    <p>Віднімання виконується аналогічно додаванню!</p>
+                    
+                    <div class="example-box math">
+                        <pre>
+  5,00
+- 2,37
+------
+  2,63
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="theory-card important">
+                    <h3>💡 Пам'ятай!</h3>
+                    <p>Якщо цифр не вистачає — дописуємо нулі в кінці дробу:</p>
+                    <p><strong>5 = 5,0 = 5,00 = 5,000</strong></p>
+                </div>
+            </article>
+
+            <article class="practice-block">
+                <h2>✏️ Практичні завдання</h2>
+
+                <div class="task-card">
+                    <h3>Завдання 1. Додавання</h3>
+                    <div class="task-content">
+                        <p>Обчисліть:</p>
+                        <ul class="task-list">
+                            <li>2,5 + 3,7 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>4,25 + 1,75 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>0,8 + 2,4 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>3,14 + 2,86 = <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 6,2; 6,0; 3,2; 6,0')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3>Завдання 2. Віднімання</h3>
+                    <div class="task-content">
+                        <p>Обчисліть:</p>
+                        <ul class="task-list">
+                            <li>5,8 - 2,3 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>7,0 - 3,5 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>10,0 - 4,75 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>6,25 - 2,5 = <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 3,5; 3,5; 5,25; 3,75')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3>Завдання 3. Рівняння</h3>
+                    <div class="task-content">
+                        <p>Розв'яжіть рівняння:</p>
+                        <ul class="task-list">
+                            <li>x + 2,5 = 7,8 → x = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>x - 3,4 = 5,6 → x = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>9,2 - x = 4,7 → x = <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 5,3; 9,0; 4,5')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card hard">
+                    <h3>⭐ Задача з життя</h3>
+                    <div class="task-content">
+                        <p>Мама купила 2,5 кг яблук, 1,75 кг груш і 0,8 кг слив. Скільки всього фруктів купила мама?</p>
+                        <p>Відповідь: <input type="text" class="answer-input" placeholder="?"> кг</p>
+                        <button class="check-btn" onclick="alert('Відповідь: 5,05 кг')">Перевірити</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="media-block">
+                <h2>🎥 Додаткові матеріали</h2>
+                <div class="media-placeholder">
+                    <div class="video-placeholder">
+                        <span>▶️ Відеоурок (завантажується...)</span>
+                    </div>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">📥 Презентація (PDF)</a>
+                        <a href="#" class="download-btn">📥 Конспект (DOCX)</a>
+                        <a href="#" class="download-btn">📥 Домашнє завдання</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="lesson-navigation">
+        <a href="rounding.html" class="nav-btn prev">← Попередня тема: Округлення</a>
+        <a href="index.html" class="nav-btn next">До списку тем →</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Викладач математики</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-list').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

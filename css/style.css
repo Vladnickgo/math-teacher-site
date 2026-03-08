@@ -1,0 +1,951 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ===== ГОЛОВНЕ МЕНЮ ===== */
+.main-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+    padding: 15px 0;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333;
+    padding: 20px 15px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.menu-list a:hover {
+    background: #667eea;
+    color: white;
+}
+
+.menu-list a.active {
+    background: #667eea;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ===== ПРОФІЛЬ ВИКЛАДАЧА ===== */
+.teacher-profile {
+    padding: 60px 20px;
+    background: rgba(255,255,255,0.1);
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-placeholder {
+    width: 250px;
+    height: 300px;
+    background: rgba(255,255,255,0.2);
+    border: 3px dashed rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.teacher-info {
+    color: white;
+    max-width: 500px;
+}
+
+.teacher-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.position {
+    font-size: 1.3em;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.quote {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #ffd700;
+    backdrop-filter: blur(5px);
+}
+
+.quote blockquote {
+    font-size: 1.3em;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.quote cite {
+    display: block;
+    text-align: right;
+    opacity: 0.8;
+    font-size: 1.1em;
+}
+
+/* ===== ПУБЛІКАЦІЇ ===== */
+.publications {
+    background: white;
+    padding: 60px 20px;
+}
+
+.publications h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 40px;
+}
+
+.pub-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pub-card {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.pub-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: #667eea;
+}
+
+.pub-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.pub-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.pub-meta {
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.pub-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.pub-btn {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.pub-btn:hover {
+    background: #764ba2;
+}
+
+/* ===== ШВИДКІ ПОСИЛАННЯ ===== */
+.quick-links {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.quick-links h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 40px;
+}
+
+.links-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.quick-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quick-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.quick-icon {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #333;
+    color: white;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-list {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        display: none;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .menu-list.active {
+        display: flex;
+    }
+    
+    .menu-list a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .teacher-info h1 {
+        font-size: 1.8em;
+    }
+}
+/* ===== СТИЛІ ДЛЯ ВНУТРІШНІХ СТОРІНОК ===== */
+.page-content {
+    padding: 80px 20px;
+    min-height: 60vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-content h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.placeholder-content {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.placeholder-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.coming-soon {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1em;
+}
+/* ===== СТОРІНКА КУРСІВ ===== */
+
+.page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+/* Секція курсів */
+.courses-section {
+    padding: 20px;
+    background: white;
+}
+
+.courses-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Картка курсу */
+.course-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Заголовок курсу з кольорами для класів */
+.course-header {
+    padding: 25px;
+    color: white;
+    position: relative;
+}
+
+.grade-5 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.grade-6 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.grade-7 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.grade-7-geo { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.grade-8 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.grade-9 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; }
+
+.course-grade {
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.course-header h2 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Тіло картки */
+.course-body {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.course-topics {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.course-topics h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.course-topics ul {
+    list-style: none;
+}
+
+.course-topics li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+}
+
+.course-topics li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Футер картки */
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.course-duration {
+    color: #888;
+    font-size: 0.95em;
+}
+
+.course-btn {
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.course-btn:hover {
+    background: #764ba2;
+}
+
+/* Додаткова інформація */
+.courses-info {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-container h3 {
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.info-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.info-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .courses-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2em;
+    }
+    
+    .course-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* ===== НАВІГАЦІЯ ===== */
+
+.breadcrumbs {
+    background: rgba(255,255,255,0.9);
+    padding: 15px 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.breadcrumbs a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #333;
+    font-weight: bold;
+}
+
+/* ===== СТОРІНКА КЛАСУ ===== */
+
+.class-header {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.grade-5-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.class-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.topics-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.topics-section h2 {
+    text-align: center;
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.topics-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.topic-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.topic-card.active-topic {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8eaff 100%);
+}
+
+.topic-number {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #667eea;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.topic-card h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.topic-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.topic-list li {
+    padding: 5px 0;
+    color: #666;
+    font-size: 0.95em;
+    padding-left: 15px;
+    position: relative;
+}
+
+.topic-list li:before {
+    content: "•";
+    color: #667eea;
+    position: absolute;
+    left: 0;
+}
+
+.topic-btn {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.topic-btn:hover {
+    background: #764ba2;
+}
+
+/* Ресурси */
+.resources-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.resources-section h2 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 40px;
+}
+
+.resources-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.res-icon {
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* ===== СТОРІНКА УРОКУ ===== */
+
+.lesson-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.lesson-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.lesson-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.lesson-subtitle {
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+.lesson-content {
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.theory-block, .practice-block, .media-block {
+    margin-bottom: 40px;
+}
+
+.theory-block h2, .practice-block h2, .media-block h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.theory-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.theory-card.important {
+    border-left: 5px solid #ffd700;
+    background: linear-gradient(90deg, #fff9e6 0%, white 100%);
+}
+
+.theory-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.rules-list {
+    padding-left: 20px;
+}
+
+.rules-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.rules-list ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.example-box {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.example-box.math pre {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Завдання */
+.task-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.task-card.hard {
+    border: 2px solid #ffd700;
+}
+
+.task-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.task-list {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.task-list li {
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+
+.answer-input {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 15px;
+    width: 100px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.answer-input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.check-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.check-btn:hover {
+    background: #764ba2;
+}
+
+/* Медіа */
+.media-placeholder {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.video-placeholder {
+    background: #333;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.download-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.download-btn {
+    background: #f0f4ff;
+    color: #667eea;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Навігація уроку */
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.nav-btn {
+    background: #667eea;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #764ba2;
+    transform: translateX(5px);
+}
+
+.nav-btn.prev:hover {
+    transform: translateX(-5px);
+}

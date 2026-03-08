@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Округлення чисел | 5 клас</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="main-menu">
+        <div class="logo">🧮 5 клас</div>
+        <ul class="menu-list">
+            <li><a href="../../index.html">🏠 На головну</a></li>
+            <li><a href="index.html">📐 Математика 5</a></li>
+            <li><a href="../index.html">Всі класи</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Хлібні крихти -->
+    <div class="breadcrumbs">
+        <a href="../../index.html">Головна</a> / 
+        <a href="../index.html">Класи</a> / 
+        <a href="index.html">5 клас</a> / 
+        <span>Округлення чисел</span>
+    </div>
+
+    <!-- Заголовок теми -->
+    <section class="lesson-header">
+        <div class="lesson-badge">Тема 4</div>
+        <h1>🎯 Округлення натуральних чисел і десяткових дробів</h1>
+        <p class="lesson-subtitle">Підручник: Мерзляк А.Г., § 7-8, стор. 45-52</p>
+    </section>
+
+    <!-- Теорія -->
+    <section class="lesson-content">
+        <div class="content-wrapper">
+            
+            <!-- Блок теорії -->
+            <article class="theory-block">
+                <h2>📚 Теорія</h2>
+                
+                <div class="theory-card">
+                    <h3>Що таке округлення?</h3>
+                    <p><strong>Округлення</strong> — це заміна числа близьким до нього числом з нулями на кінці.</p>
+                    
+                    <div class="example-box">
+                        <strong>Приклад:</strong><br>
+                        47 ≈ 50 (округлено до десятків)<br>
+                        234 ≈ 200 (округлено до сотень)
+                    </div>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Правила округлення</h3>
+                    <ol class="rules-list">
+                        <li>Знаходимо розряд, до якого округлюємо</li>
+                        <li>Дивимося на наступну цифру праворуч:
+                            <ul>
+                                <li>Якщо <strong>0, 1, 2, 3, 4</strong> — залишаємо цифру без зміни (відкидаємо)</li>
+                                <li>Якщо <strong>5, 6, 7, 8, 9</strong> — збільшуємо цифру на 1</li>
+                            </ul>
+                        </li>
+                        <li>На місці відкинутих цифр пишемо нулі</li>
+                    </ol>
+                </div>
+
+                <div class="theory-card important">
+                    <h3>⚠️ Важливо!</h3>
+                    <p>При округленні <strong>десяткових дробів</strong> відкинуті цифри не замінюємо нулями!</p>
+                    <div class="example-box">
+                        3,47 ≈ 3,5 (до десятих)<br>
+                        8,123 ≈ 8,12 (до сотих)
+                    </div>
+                </div>
+            </article>
+
+            <!-- Практика -->
+            <article class="practice-block">
+                <h2>✏️ Практичні завдання</h2>
+
+                <div class="task-card">
+                    <h3>Завдання 1. Округлення до десятків</h3>
+                    <div class="task-content">
+                        <p>Округліть числа до десятків:</p>
+                        <ul class="task-list">
+                            <li>47 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>152 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>385 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>94 → <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 50, 150, 390, 90')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3>Завдання 2. Округлення до сотень</h3>
+                    <div class="task-content">
+                        <p>Округліть числа до сотень:</p>
+                        <ul class="task-list">
+                            <li>247 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>856 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>1 432 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>3 549 → <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 200, 900, 1 400, 3 500')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h3>Завдання 3. Десяткові дроби</h3>
+                    <div class="task-content">
+                        <p>Округліть до десятих:</p>
+                        <ul class="task-list">
+                            <li>4,37 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>8,54 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>12,89 → <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>0,95 → <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 4,4; 8,5; 12,9; 1,0')">Перевірити</button>
+                    </div>
+                </div>
+
+                <div class="task-card hard">
+                    <h3>⭐ Задача з зірочкою</h3>
+                    <div class="task-content">
+                        <p>Відстань від Землі до Місяця — 384 400 км. Округліть це число:</p>
+                        <ul class="task-list">
+                            <li>а) до десятків тисяч: <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>б) до сотень тисяч: <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>в) до мільйонів: <input type="text" class="answer-input" placeholder="?"></li>
+                        </ul>
+                        <button class="check-btn" onclick="alert('Відповіді: 380 000; 400 000; 0')">Перевірити</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Відео/презентація -->
+            <article class="media-block">
+                <h2>🎥 Додаткові матеріали</h2>
+                <div class="media-placeholder">
+                    <div class="video-placeholder">
+                        <span>▶️ Відеоурок (завантажується...)</span>
+                    </div>
+                    <div class="download-links">
+                        <a href="#" class="download-btn">📥 Презентація (PDF)</a>
+                        <a href="#" class="download-btn">📥 Конспект (DOCX)</a>
+                        <a href="#" class="download-btn">📥 Домашнє завдання</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Навігація між темами -->
+    <section class="lesson-navigation">
+        <a href="index.html" class="nav-btn prev">← До списку тем</a>
+        <a href="decimals.html" class="nav-btn next">Наступна тема: Десяткові дроби →</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Викладач математики</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-list').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
