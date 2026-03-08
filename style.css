@@ -13,6 +13,89 @@ body {
     color: #333;
 }
 
+/* ===== ГОЛОВНЕ МЕНЮ ===== */
+.main-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+    padding: 15px 0;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333;
+    padding: 20px 15px;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.menu-list a:hover {
+    background: #667eea;
+    color: white;
+}
+
+.menu-list a.active {
+    background: #667eea;
+    color: white;
+}
+
+/* Кнопка для мобільного меню */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-list {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        display: none;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    .menu-list.active {
+        display: flex;
+    }
+    
+    .menu-list a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* ===== ІНШІ СТИЛІ ===== */
 header {
     text-align: center;
     padding: 40px 20px;

@@ -7,9 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ГОЛОВНЕ МЕНЮ -->
+    <nav class="main-menu">
+        <div class="logo">🧮 Математика</div>
+        <ul class="menu-list">
+            <li><a href="index.html" class="active">Головна</a></li>
+            <li><a href="about.html">Про мене</a></li>
+            <li><a href="courses.html">Курси</a></li>
+            <li><a href="materials.html">Матеріали</a></li>
+            <li><a href="schedule.html">Розклад</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
     <header>
         <h1>👨‍🏫 Сайт викладача математичних дисциплін</h1>
-        <p>Скоро відкриття...</p>
+        <p>Навчання з любов'ю до цифр</p>
     </header>
     
     <main>
@@ -29,5 +43,11 @@
     <footer>
         <p>&copy; 2026 Викладач математики</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-list').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
