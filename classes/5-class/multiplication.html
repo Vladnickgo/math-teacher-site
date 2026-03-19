@@ -132,54 +132,41 @@
 
             <article class="practice-block">
                 <h2>✏️ Практичні завдання</h2>
-
+            
                 <div class="task-card">
-                    <h3>Завдання 1. Додавання</h3>
+                    <h3>Завдання 1. Множення на розрядну одиницю</h3>
                     <div class="task-content">
-                        <p>Обчисліть:</p>
+                        <p>Обчисліть (перенесіть кому):</p>
                         <ul class="task-list">
-                            <li>2,5 + 3,7 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>4,25 + 1,75 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>0,8 + 2,4 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>3,14 + 2,86 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>4,25 · 10 = <input type="text" class="answer-input" data-answer="42,5" placeholder="?"></li>
+                            <li>0,8 · 100 = <input type="text" class="answer-input" data-answer="80" placeholder="?"></li>
+                            <li>32,7 · 0,1 = <input type="text" class="answer-input" data-answer="3,27" placeholder="?"></li>
+                            <li>540 · 0,01 = <input type="text" class="answer-input" data-answer="5,4" placeholder="?"></li>
                         </ul>
-                        <button class="check-btn" onclick="alert('Відповіді: 6,2; 6,0; 3,2; 6,0')">Перевірити</button>
+                        <button class="check-btn" onclick="checkTask(this)">Перевірити</button>
                     </div>
                 </div>
-
+            
                 <div class="task-card">
-                    <h3>Завдання 2. Віднімання</h3>
+                    <h3>Завдання 2. Обчислення добутку</h3>
                     <div class="task-content">
-                        <p>Обчисліть:</p>
+                        <p>Виконайте множення:</p>
                         <ul class="task-list">
-                            <li>5,8 - 2,3 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>7,0 - 3,5 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>10,0 - 4,75 = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>6,25 - 2,5 = <input type="text" class="answer-input" placeholder="?"></li>
+                            <li>0,3 · 0,7 = <input type="text" class="answer-input" data-answer="0,21" placeholder="?"></li>
+                            <li>1,2 · 0,5 = <input type="text" class="answer-input" data-answer="0,6" placeholder="?"></li>
+                            <li>0,04 · 0,2 = <input type="text" class="answer-input" data-answer="0,008" placeholder="?"></li>
+                            <li>1,5 · 4 = <input type="text" class="answer-input" data-answer="6" placeholder="?"></li>
                         </ul>
-                        <button class="check-btn" onclick="alert('Відповіді: 3,5; 3,5; 5,25; 3,75')">Перевірити</button>
+                        <button class="check-btn" onclick="checkTask(this)">Перевірити</button>
                     </div>
                 </div>
-
-                <div class="task-card">
-                    <h3>Завдання 3. Рівняння</h3>
-                    <div class="task-content">
-                        <p>Розв'яжіть рівняння:</p>
-                        <ul class="task-list">
-                            <li>x + 2,5 = 7,8 → x = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>x - 3,4 = 5,6 → x = <input type="text" class="answer-input" placeholder="?"></li>
-                            <li>9,2 - x = 4,7 → x = <input type="text" class="answer-input" placeholder="?"></li>
-                        </ul>
-                        <button class="check-btn" onclick="alert('Відповіді: 5,3; 9,0; 4,5')">Перевірити</button>
-                    </div>
-                </div>
-
+            
                 <div class="task-card hard">
-                    <h3>⭐ Задача з життя</h3>
+                    <h3>⭐ Задача на логіку</h3>
                     <div class="task-content">
-                        <p>Мама купила 2,5 кг яблук, 1,75 кг груш і 0,8 кг слив. Скільки всього фруктів купила мама?</p>
-                        <p>Відповідь: <input type="text" class="answer-input" placeholder="?"> кг</p>
-                        <button class="check-btn" onclick="alert('Відповідь: 5,05 кг')">Перевірити</button>
+                        <p>Сторона квадрата дорівнює 1,2 см. Знайдіть його площу.</p>
+                        <p>Відповідь: <input type="text" class="answer-input" data-answer="1,44" placeholder="?"> см²</p>
+                        <button class="check-btn" onclick="checkTask(this)">Перевірити</button>
                     </div>
                 </div>
             </article>
@@ -215,34 +202,32 @@
             document.querySelector('.menu-list').classList.toggle('active');
         }
 
-        function checkAnswers() {
-            // 1. Находим все поля ввода в этой карточке
-            const inputs = document.querySelectorAll('.answer-input');
+        function checkTask(button) {
+    // Находим карточку, в которой нажата кнопка
+    const card = button.closest('.task-card');
+    const inputs = card.querySelectorAll('.answer-input');
+    let allCorrect = true;
 
-            // 2. Правильные ответы (в том же порядке, что и в HTML)
-            const correctAnswers = ["6,2", "6", "3,2", "6"];
+    inputs.forEach(input => {
+        const userAnswer = input.value.trim().replace('.', ','); // заменяем точку на запятую
+        const correctAnswer = input.dataset.answer.replace('.', ',');
 
-            let results = [];
-            let allCorrect = true;
-
-            inputs.forEach((input, index) => {
-                const userAnswer = input.value.trim().replace('.', ','); // Заменяем точку на запятую для удобства
-
-                if (userAnswer === correctAnswers[index]) {
-                    results.push(`№${index + 1}: Верно ✅`);
-                } else {
-                    results.push(`№${index + 1}: Ошибка ❌ (ваш ответ: ${userAnswer || 'пусто'})`);
-                    allCorrect = false;
-                }
-            });
-
-            // 3. Выводим результат в alert
-            if (allCorrect) {
-                alert("Поздравляем! Все примеры решены правильно! 🎉");
-            } else {
-                alert("Есть ошибки:\n" + results.join('\n'));
-            }
+        if (userAnswer === correctAnswer) {
+            input.style.backgroundColor = "#d4edda"; // Зеленый для правильного
+            input.style.borderColor = "#28a745";
+        } else {
+            input.style.backgroundColor = "#f8d7da"; // Красный для ошибки
+            input.style.borderColor = "#dc3545";
+            allCorrect = false;
         }
+    });
+
+    if (allCorrect) {
+        alert("Молодець! Все правильно! 🎉");
+    } else {
+        alert("Є помилки. Спробуй ще раз! ✍️");
+    }
+}
     </script>
 </body>
 
